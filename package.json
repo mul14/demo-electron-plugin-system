@@ -1,0 +1,10 @@
+{
+  "name": "plugins-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^15.1.0",
+    "electron-builder": "^22.11.7"
+  }
+}

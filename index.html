@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugin System</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app" class="flex">
+    <div class="w-1/6 bg-gray-700 text-white">
+      <h1>MENU</h1>
+      <ul id="menu" class="list-disc pl-4"></ul>
+    </div>
+    <div class="w-5/6 h-screen bg-gray-400">
+      <main>CONTENT</main>
+      <div id="statusbar" class="bg-black">
+      </div>
+    </div>
+  </div>
+  <script>
+    (async () => {
+      const plugins = await window.api.loadPlugins()
+
+      for (menu of plugins) {
+        const li = document.createElement('li')
+        li.innerText = menu
+        document.querySelector('#menu').append(li)
+      }
+      
+    })()
+  </script>
+</body>
+
+</html>
