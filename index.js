@@ -33,7 +33,8 @@ async function loadPlugins() {
     const manifestFile = path.join(pluginPath, plugin, 'plugin.json')
 
     if (await fs.stat(manifestFile)) {
-      availablePlugins.push(plugin)
+      const manifest = require(manifestFile)
+      availablePlugins.push(manifest)
     }
   }
 

@@ -1,4 +1,6 @@
 {
+  "name": "File Manager",
+  "route": "files",
   "permissions": [
     "menu"
   ]

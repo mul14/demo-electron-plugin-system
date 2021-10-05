@@ -25,12 +25,17 @@
     (async () => {
       const plugins = await window.api.loadPlugins()
 
-      for (menu of plugins) {
+      for (plugin of plugins) {
+        const a = document.createElement('a')
+        a.href = `#/${plugin.route}`
+        a.innerText = plugin.name
+
         const li = document.createElement('li')
-        li.innerText = menu
+        li.appendChild(a)
+
         document.querySelector('#menu').append(li)
       }
-      
+
     })()
   </script>
 </body>

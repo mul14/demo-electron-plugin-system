@@ -1,6 +1,7 @@
 {
+  "name": "Gallery",
+  "route": "gallery",
   "permissions": [
-    "menu",
-    "statusbar"
+    "menu"
   ]
 }
